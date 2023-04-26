@@ -28,11 +28,4 @@ def test_get_link_eltiempo():
 
     assert get_link_eltiempo(links) == text_response
 
-def get_link_elespectador():
-
-    soup = BeautifulSoup(html, "html.parser")
-    links = soup.find_all('a')[2]
-
-    assert get_link_elespectador(links) == text_response
-
     
