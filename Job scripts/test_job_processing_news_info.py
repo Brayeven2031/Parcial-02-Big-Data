@@ -1,4 +1,3 @@
-
 from bs4 import BeautifulSoup
 from job_processing_news_info import get_link_eltiempo, get_link_elespectador
 
@@ -55,5 +54,3 @@ def test_get_link_elespectador():
     links = soup.find_all('a')[0]
     
     assert get_link_elespectador(links) == text_response_espect
-
-    
