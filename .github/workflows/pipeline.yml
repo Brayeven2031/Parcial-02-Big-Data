@@ -46,6 +46,11 @@ jobs:
           flake8 Job\ scripts/job_bring_news_info.py
           
           pytest
+      - name: Update code
+        run: |
+          source env/bin/activate
+          aws s3 cp Job\ scripts/job_bring_news_info.py s3://aws-glue-assets-070749073205-us-east-1/scripts/
+          aws s3 cp Job\ scripts/job_processing_news_info.py s3://aws-glue-assets-070749073205-us-east-1/scripts/
           
           
           
